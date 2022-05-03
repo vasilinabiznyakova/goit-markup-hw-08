@@ -1,0 +1,31 @@
+.footer-container {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+}
+
+.footer-address-info {
+    margin-right: 70px;
+}
+
+.footer-social-info-title {
+    display: block;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--primary-text-color-theme-light);
+}
+
+footer .social-list-item:not(:last-child) {
+    margin-right: 10px;
+}
+.footer-social-list-icon {
+    fill: var(--primary-text-color-theme-light);
+}
+
+.footer-social-list-link {
+    background-color: var(--footer-bg-icon-primary-color);
+}

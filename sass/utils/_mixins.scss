@@ -1,0 +1,21 @@
+@mixin font($fs) {
+    font-size: $fs;
+    font-weight: 400;  
+}
+@mixin hidden-content {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+@mixin visible-content {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+@mixin mobile-font($fs,$lh,$fc) {
+    font-weight: 500;
+    font-size: $fs;
+    line-height: $lh;
+    letter-spacing: 0.02em;
+    color: $fc;
+}

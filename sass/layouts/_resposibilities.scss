@@ -1,0 +1,34 @@
+.responsibilities {
+    padding-bottom: 94px;
+}
+
+.jobs-list {
+    display: flex;
+}
+
+.jobs-list-item {
+    flex-basis: calc(100% / 3);
+
+    &:not(:nth-child(3n + 1)) {
+        margin-left: var(--card-set-gap);
+    }
+}
+
+.jobs-list-item-wrapper {
+    position: relative;
+}
+
+.jobs-list-item-description {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 27px 82px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--primary-text-color-theme-light);
+    background: var(--jobs-list-item-description-background);
+}

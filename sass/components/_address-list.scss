@@ -1,0 +1,17 @@
+.address-list-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+}
+
+.address-list-residence {
+    color: var(--primary-text-color-theme-light);
+}
+
+.address-list-contacts {
+    color: var(--secondary-text-color-theme-light);
+}
+.address-list-item:not(:last-child) {
+    margin-bottom: 10px;
+}

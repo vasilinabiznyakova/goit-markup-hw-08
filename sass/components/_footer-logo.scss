@@ -1,0 +1,21 @@
+.footer {
+    background-color: var(--primary-background-color-theme-dark);
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.footer-logo {
+    display: inline-block;
+    margin-bottom: 20px;
+
+    font-family: var(--secondary-font-family);
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: var(--logo-main-color);
+}
+
+.footer-logo-secondary {
+    color: var(--primary-text-color-theme-light);
+}

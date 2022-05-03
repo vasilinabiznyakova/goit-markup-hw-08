@@ -1,0 +1,25 @@
+:root {
+    --primary-font-family: Roboto, sans-serif;
+    --secondary-font-family: Raleway, sans-serif;
+    --primary-text-color-theme-dark: #757575;
+    --secondary-text-color-theme-dark: #212121;
+    --primary-text-color-theme-light: #ffffff;
+    --secondary-text-color-theme-light: rgba(255, 255, 255, 0.6);
+    --primary-background-color-theme-dark: #2f303a;
+    --secondary-background-color-theme-light: #f5f4fa;
+    --logo-main-color: #2196f3;
+    --header-border-color: #ececec;
+    --header-logo-secondary-color: #212121;
+    --bg-overlay-dark: rgba(47, 48, 58, 0.4);
+    --btn-shadow-color: rgba(0, 0, 0, 0.15);
+    --card-shadow-primary-color: rgba(0, 0, 0, 0.12);
+    --card-shadow-secondary-color: rgba(0, 0, 0, 0.2);
+    --portfolio-card-border-color: #eeeeee;
+    --accent-color: #2196f3;
+    --icon-color: #afb1b8;
+    --footer-bg-icon-primary-color: rgba(255, 255, 255, 0.1);
+    --overlay-color: rgba(33, 150, 243, 0.9);
+    --card-set-gap: 30px;
+    --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    --jobs-list-item-description-background: rgba(47, 48, 58, 0.8);
+}
