@@ -148,9 +148,93 @@ address {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .nav-list {
+    display: flex;
+    text-align: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .nav-list__link {
+    position: relative;
+    display: block;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--secondary-text-color-theme-dark);
+    transition: color 250ms var(--transition-timing-function);
+  }
+  .nav-list__link.current {
+    color: #2196F3;
+  }
+  .nav-list__link:hover, .nav-list__link:focus {
+    color: var(--accent-color);
+  }
+  .nav-list__item:not(:last-child) {
+    margin-right: 50px;
+  }
+  .nav-list__link.current::after {
+    position: absolute;
+    content: "";
+    display: block;
+    height: 4px;
+    width: 100%;
+    background: #2196F3;
+    border-radius: 2px;
+    transform: translateY(28px);
+  }
+}
+
 @media screen and (max-width: 767px) {
   .contacts-list {
     display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contacts-list__info {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: var(--primary-text-color-theme-dark);
+  }
+  .contacts-list__info > svg {
+    margin-right: 10px;
+    fill: var(--primary-text-color-theme-dark);
+  }
+  .contacts-list__item:first-child {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts-list {
+    display: flex;
+    margin-left: auto;
+  }
+  .contacts-list__item:first-child {
+    margin-right: 50px;
+  }
+  .contacts-list__info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    color: var(--primary-text-color-theme-dark);
+    transition: color 250ms var(--transition-timing-function);
+  }
+  .contacts-list__info:hover, .contacts-list__info:focus {
+    color: var(--accent-color);
+  }
+  .contacts-list__info > svg {
+    transition: fill 250ms var(--transition-timing-function);
+  }
+  .contacts-list__info:hover > svg,
+  .contacts-list__info:focus > svg {
+    fill: var(--accent-color);
   }
 }
 
@@ -478,7 +562,7 @@ address {
     right: 15px;
   }
   .mobile-menu__nav-list {
-    margin-bottom: 302px;
+    padding-bottom: 302px;
   }
   .mobile-menu__nav-text {
     font-weight: 500;
@@ -488,10 +572,13 @@ address {
     color: var(--secondary-text-color-theme-dark);
   }
   .mobile-menu__nav-item:not(:last-child) {
-    margin-bottom: 32px;
+    padding-bottom: 32px;
   }
   .mobile-menu__nav-link.current {
     color: var(--accent-color);
+  }
+  .mobile-menu__nav-link {
+    display: block;
   }
   .mobile-menu__contacts-phone {
     font-weight: 500;
@@ -511,7 +598,7 @@ address {
     margin-bottom: 32px;
   }
   .mobile-menu__contacts-list {
-    margin-bottom: 64px;
+    padding-bottom: 64px;
   }
   .mobile-menu__social-list {
     display: flex;
@@ -521,25 +608,31 @@ address {
     position: relative;
   }
   .mobile-menu__social-item:not(:last-child) {
-    padding-right: 20px;
+    margin-right: 20px;
   }
   .mobile-menu__social-item:not(:last-child) .mobile-menu__social-link::after {
     position: absolute;
     display: block;
     content: "";
     width: 22px;
-    height: 1px;
+    height: 2px;
     background-color: rgba(33, 33, 33, 0.2);
     transform: rotate(90deg);
     transform-origin: right center;
-    right: 10px;
+    right: -10px;
   }
   .mobile-menu__social-link {
+    display: block;
     font-weight: 500;
     font-size: 18px;
     line-height: 1.22;
     letter-spacing: 0.02em;
     color: #2196F3;
+  }
+  .mobile-menu__close-btn:hover .mobile-menu_close-icon,
+  .mobile-menu__close-btn:focus .mobile-menu_close-icon {
+    fill: var(--accent-color);
+    transition: fill 250ms var(--transition-timing-function);
   }
 }
 
@@ -560,11 +653,12 @@ address {
 
 .header {
   position: relative;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  border-bottom: 1px solid var(--header-border-color);
 }
 
 .header__logo {
+  padding-top: 10px;
+  padding-bottom: 10px;
   font-family: Raleway;
   font-weight: 700;
   font-size: 26px;
@@ -575,6 +669,25 @@ address {
 
 .header__logo_theme-dark {
   color: var(--secondary-text-color-theme-dark);
+}
+
+@media screen and (min-width: 768px) {
+  .header__logo {
+    padding-top: 26px;
+    padding-bottom: 26px;
+    font-size: 24px;
+    line-height: 1.17;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header__logo {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    margin-right: 92px;
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 
 .hero {

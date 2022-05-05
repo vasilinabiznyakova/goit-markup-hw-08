@@ -2,43 +2,57 @@
     
     .contacts-list {
         display: none;
-    }
-    
+    }   
 }
 
-// .contacts-list {
-//   @extend %flex-center;
-// }
+@media screen and (min-width:768px) {
 
-// .contacts-list__item:first-child {
-//     margin-right: 50px;
-// }
-// .contacts-list__info {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
+    .contacts-list__info {
+        @include mobile-font(12px, 1.17, var(--primary-text-color-theme-dark));    
+    }      
 
-//     padding-top: 32px;
-//     padding-bottom: 32px;
+    .contacts-list__info>svg {
+        margin-right: 10px;
+        fill: var(--primary-text-color-theme-dark);
+    }
 
-//     color: var(--primary-text-color-theme-dark);
-//     transition: color 250ms var(--transition-timing-function);
-//     &:hover,
-//     &:focus {
-//         color: var(--accent-color);
-//     }
-// }
+    .contacts-list__item:first-child {
+            margin-bottom: 10px;
+        }
+}
 
+@media screen and (min-width: 1200px) {
+    .contacts-list {
+        display: flex;
+        margin-left: auto;
+    }
+    
+    .contacts-list__item:first-child {
+        margin-right: 50px;
+    }
+    
+    .contacts-list__info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-// .contacts-list__info>svg {
-//     margin-right: 10px;
-//     fill: var(--primary-text-color-theme-dark);
+        padding-top: 32px;
+        padding-bottom: 32px;
 
-//     transition: fill 250ms var(--transition-timing-function);
-// }
+        color: var(--primary-text-color-theme-dark);
+        transition: color 250ms var(--transition-timing-function);
+        &:hover,
+        &:focus {
+        color: var(--accent-color);
+    }
+}
 
-
-// .contacts-list__info:hover>svg,
-// .contacts-list__info:focus>svg {
-//     fill: var(--accent-color);
-// }
+    .contacts-list__info>svg {
+        transition: fill 250ms var(--transition-timing-function);
+    }
+    
+    .contacts-list__info:hover>svg,
+    .contacts-list__info:focus>svg {
+        fill: var(--accent-color);
+    }
+}
