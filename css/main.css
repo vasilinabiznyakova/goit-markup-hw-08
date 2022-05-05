@@ -248,20 +248,6 @@ address {
   color: var(--secondary-text-color-theme-dark);
 }
 
-.main-title {
-  max-width: 696px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 30px;
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  text-align: center;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--primary-text-color-theme-light);
-}
-
 .modal {
   position: absolute;
   top: 50%;
@@ -693,18 +679,37 @@ address {
 .hero {
   background-image: linear-gradient(var(--bg-overlay-dark), var(--bg-overlay-dark)), url(../images/hero-bg.jpg);
   background-size: cover;
-  background-repeat: no-repeat;
   background-position: center;
   background-color: var(--primary-background-color-theme-dark);
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   text-align: center;
 }
 
-.hero-btn {
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(var(--bg-overlay-dark), var(--bg-overlay-dark)), url(../images/hero-bg@2x.jpg);
+  }
+}
+
+.hero__title {
+  max-width: 696px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--primary-text-color-theme-light);
+}
+
+.hero__btn {
   display: inline-block;
   min-width: 200px;
-  padding: 6px 30px;
+  padding: 10px 32px;
   border: none;
   cursor: pointer;
   font-family: inherit;
@@ -720,8 +725,29 @@ address {
   transition: background-color 250ms var(--transition-timing-function);
 }
 
-.hero-btn:hover, .hero-btn:focus {
+.hero__btn:hover, .hero__btn:focus {
   background-color: #188ce8;
+}
+
+@media screen and (min-width: 768px) {
+  .hero__title {
+    max-width: 360px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+  .main-title {
+    max-width: 696px;
+    font-size: 44px;
+    line-height: 1.36;
+  }
+  .hero__btn {
+    padding: 6px 30px;
+  }
 }
 
 .features-list {
