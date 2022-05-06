@@ -1,19 +1,5 @@
-.modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 40px;
-    width: 528px;
-    height: 581px;
-    background-color: #FFFFFF;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
-        0px 1px 1px rgba(0, 0, 0, 0.14),
-        0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-}
 
-.modal-button {
+.modal__button {
 
     position: absolute;
     top: 8px;
@@ -34,11 +20,11 @@
         outline: none;
     }
 }
-.modal-close-icon {
+.modal__close-icon {
     transition: fill 250ms var(--transition-timing-function);
 
-    .modal-button:hover>&,
-    .modal-button:focus>& {
+    .modal__button:hover>&,
+    .modal__button:focus>& {
         fill: var(--accent-color);
     }
 }

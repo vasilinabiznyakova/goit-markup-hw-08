@@ -1,12 +1,18 @@
+@media screen and (max-width: 1199px) {
+    .responsibilities {
+        display: none;
+    }  
+}
+
 .responsibilities {
     padding-bottom: 94px;
 }
 
-.jobs-list {
+.responsibilities__list {
     display: flex;
 }
 
-.jobs-list-item {
+.responsibilities__item {
     flex-basis: calc(100% / 3);
 
     &:not(:nth-child(3n + 1)) {
@@ -14,11 +20,11 @@
     }
 }
 
-.jobs-list-item-wrapper {
+.responsibilities__item-wrapper {
     position: relative;
 }
 
-.jobs-list-item-description {
+.responsibilities__description {
     position: absolute;
     bottom: 0;
     width: 100%;
