@@ -4,18 +4,28 @@
     padding-bottom: 60px;
 }
 
-.footer-logo {
+.footer__logo {
     display: inline-block;
     margin-bottom: 20px;
 
     font-family: var(--secondary-font-family);
     font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
+    font-size: 24px;
+    line-height: 1.17;
     letter-spacing: 0.03em;
     color: var(--logo-main-color);
 }
 
-.footer-logo-secondary {
+.footer__logo-secondary {
     color: var(--primary-text-color-theme-light);
 }
+
+@media screen and (min-width:1200px) {
+    .footer__logo {
+    
+            font-size: 26px;
+            line-height: 1.19;
+    
+        }   
+}
+

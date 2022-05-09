@@ -1,17 +1,27 @@
-.address-list-text {
+
+.footer__address-text {
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
 }
 
-.address-list-residence {
+.footer__address-residence {
     color: var(--primary-text-color-theme-light);
 }
 
-.address-list-contacts {
+.footer__address-contacts {
     color: var(--secondary-text-color-theme-light);
 }
-.address-list-item:not(:last-child) {
-    margin-bottom: 10px;
+.footer__address-item:not(:last-child) {
+    margin-bottom: 8px;
 }
+
+
+
+@media screen and (min-width:1200px) {
+    .footer__address-item:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+

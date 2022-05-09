@@ -1,7 +1,4 @@
-@mixin font($fs) {
-    font-size: $fs;
-    font-weight: 400;  
-}
+
 @mixin hidden-content {
     opacity: 0;
     visibility: hidden;
