@@ -1,6 +1,6 @@
 .hero {
     background-image: linear-gradient(var(--bg-overlay-dark), var(--bg-overlay-dark)),
-        url(../images/hero-bg.jpg);
+        url(../images/hero/hero-mobile.jpg);
     background-size: cover;
     background-position: center;
     background-color: var(--primary-background-color-theme-dark);
@@ -8,18 +8,24 @@
     padding-bottom: 118px;
     text-align: center;
 }
+
 @media (min-device-pixel-ratio: 2),
 (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi),
 (min-resolution: 2dppx) {
     .hero {
         background-image: linear-gradient(var(--bg-overlay-dark), var(--bg-overlay-dark)),
-        url(../images/hero-bg@2x.jpg);
+        url(../images/hero/hero-mobile@2x.jpg);
     }
 }
 
+
+@media screen and (min-width:1200px) {
+
+}
+
 .hero__title {
-        max-width: 696px;
+        max-width: 360px;
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 30px; 
@@ -57,14 +63,22 @@
 }
 
 
-@media screen and (min-width:"768px") {
-
-    .hero__title {
-        max-width: 360px;
+@media screen and (min-width:768px) {
+    .hero {
+        background-image: linear-gradient(var(--bg-overlay-dark), var(--bg-overlay-dark)),
+            url(../images/hero/hero-tablet.jpg);
     }
-    .hero__btn {
 
+    @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .hero {
+            background-image: linear-gradient(var(--bg-overlay-dark), var(--bg-overlay-dark)),
+                url(../images/hero/hero-tablet@2x.jpg);
+        }
     }
+
 }
 
 @media screen and (min-width:"1200px") {
@@ -72,9 +86,21 @@
     .hero {
         padding-top: 200px;
         padding-bottom: 200px;
-    }
+        background-image: linear-gradient(var(--bg-overlay-dark), var(--bg-overlay-dark)),
+        url(../images/hero/hero-desktop.jpg);
+            }
+        
+        @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        .hero {
+        background-image: linear-gradient(var(--bg-overlay-dark), var(--bg-overlay-dark)),
+        url(../images/hero/hero-desktop@2x.jpg);
+        }
+}
 
-    .main-title {
+    .hero__title {
         max-width: 696px;
         font-size: 44px;
         line-height: 1.36;

@@ -4,12 +4,16 @@
     margin-bottom: 40px;
 }
 
-.portfolio__item:not(:last-child) {
-    margin-right: 8px;
+.portfolio__item{
+  margin-bottom: 15px;
+  
+    &:not(:last-child) {
+        margin-right: 8px;
+    }
 }
 
 .portfolio__btn{
-    margin-bottom: 15px;
+  
     padding: 4px 20px;
     font-family: inherit;
     font-weight: 500;
