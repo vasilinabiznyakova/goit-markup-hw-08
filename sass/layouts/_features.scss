@@ -51,16 +51,18 @@
         display: flex;
         flex-wrap: wrap;
         margin-left: calc(-1 * var(--card-set-gap));
+        margin-top: calc(-1 * var(--card-set-gap));
     }
 
     .features__item {
-        flex-basis: calc(100% / 2 - 30px);
+        flex-basis: calc(100% / 2 - var(--card-set-gap));
         margin-left: var(--card-set-gap);
-
-            &:nth-child(3n) {
-                margin-bottom: 0;
-            }
+        margin-top: var(--card-set-gap);
     }
+
+        .features__item:not(:last-child) {
+            margin-bottom: 0;
+        }
 }
 
 @media screen and (min-width:1200px) {
@@ -71,9 +73,5 @@
 
     .features__item {
         flex-basis: calc(100% / 4 - 30px);
-
-            &:not(:last-child) {
-                margin-bottom: 0;
-            }
     }
 }

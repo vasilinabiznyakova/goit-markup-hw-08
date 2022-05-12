@@ -49,30 +49,32 @@
     display: flex;
     flex-wrap: wrap;
     margin-left: calc(-1 * var(--card-set-gap));
+    margin-top: calc(-1 * var(--card-set-gap));
 }
 
 .team__item {
     flex-basis: calc(100% / 2 - var(--card-set-gap));
     margin-left: var(--card-set-gap);
+    margin-top: var(--card-set-gap);;
     background: #ffffff;
     box-shadow: 0px 1px 3px var(--card-shadow-primary-color), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px var(--card-shadow-secondary-color);
     border-radius: 0px 0px 4px 4px;
+    
+    &:not(:last-child){
+        margin-bottom: 0;
+    }
+}
 }
 
-.team__item:nth-child(n+3){
-margin-bottom: 0;
-}
-}
+
 
 @media screen and (min-width: 1200px) {
     
     .team__item {
     flex-basis: calc(100% / 4 - var(--card-set-gap));
-    &:not(:last-child) {
-            margin-bottom: 0;
-        }
 }
+
 .team__content {
     padding: 30px 32px;
 }

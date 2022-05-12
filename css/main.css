@@ -912,12 +912,14 @@ main {
     display: flex;
     flex-wrap: wrap;
     margin-left: calc(-1 * var(--card-set-gap));
+    margin-top: calc(-1 * var(--card-set-gap));
   }
   .features__item {
-    flex-basis: calc(100% / 2 - 30px);
+    flex-basis: calc(100% / 2 - var(--card-set-gap));
     margin-left: var(--card-set-gap);
+    margin-top: var(--card-set-gap);
   }
-  .features__item:nth-child(3n) {
+  .features__item:not(:last-child) {
     margin-bottom: 0;
   }
 }
@@ -928,9 +930,6 @@ main {
   }
   .features__item {
     flex-basis: calc(100% / 4 - 30px);
-  }
-  .features__item:not(:last-child) {
-    margin-bottom: 0;
   }
 }
 
@@ -946,14 +945,14 @@ main {
 
 .responsibilities__list {
   display: flex;
+  margin-left: calc(-1 * var(--card-set-gap));
+  margin-top: calc(-1 * var(--card-set-gap));
 }
 
 .responsibilities__item {
-  flex-basis: calc(100% / 3);
-}
-
-.responsibilities__item:not(:nth-child(3n + 1)) {
+  flex-basis: calc(100% / 3 - var(--card-set-gap));
   margin-left: var(--card-set-gap);
+  margin-top: var(--card-set-gap);
 }
 
 .responsibilities__item-wrapper {
@@ -1022,15 +1021,17 @@ main {
     display: flex;
     flex-wrap: wrap;
     margin-left: calc(-1 * var(--card-set-gap));
+    margin-top: calc(-1 * var(--card-set-gap));
   }
   .team__item {
     flex-basis: calc(100% / 2 - var(--card-set-gap));
     margin-left: var(--card-set-gap);
+    margin-top: var(--card-set-gap);
     background: #ffffff;
     box-shadow: 0px 1px 3px var(--card-shadow-primary-color), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px var(--card-shadow-secondary-color);
     border-radius: 0px 0px 4px 4px;
   }
-  .team__item:nth-child(n+3) {
+  .team__item:not(:last-child) {
     margin-bottom: 0;
   }
 }
@@ -1038,9 +1039,6 @@ main {
 @media screen and (min-width: 1200px) {
   .team__item {
     flex-basis: calc(100% / 4 - var(--card-set-gap));
-  }
-  .team__item:not(:last-child) {
-    margin-bottom: 0;
   }
   .team__content {
     padding: 30px 32px;
@@ -1055,10 +1053,14 @@ main {
 .clients__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  margin-left: calc(-1 * var(--card-set-gap));
+  margin-top: calc(-1 * var(--card-set-gap));
 }
 
 .clients__item {
+  flex-basis: calc(100% / 2 - var(--card-set-gap));
+  margin-left: var(--card-set-gap);
+  margin-top: var(--card-set-gap);
   width: 210px;
   height: 92px;
   border: 1px solid var(--icon-color);
@@ -1070,15 +1072,10 @@ main {
   border-color: var(--accent-color);
 }
 
-.clients__item:nth-last-child(n+3) {
-  margin-bottom: 30px;
-}
-
 .clients__link {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   height: 100%;
 }
 
@@ -1102,9 +1099,7 @@ main {
 @media screen and (min-width: 780px) {
   .clients__item {
     width: 226px;
-  }
-  .clients__item:nth-last-child(3) {
-    margin-bottom: 0;
+    flex-basis: calc(100% / 3 - var(--card-set-gap));
   }
 }
 
@@ -1115,9 +1110,7 @@ main {
   }
   .clients__item {
     width: 170px;
-  }
-  .clients__item:nth-last-child(n+4) {
-    margin-bottom: 0;
+    flex-basis: calc(100% / 6 - var(--card-set-gap));
   }
 }
 
@@ -1127,12 +1120,12 @@ main {
   margin-bottom: 40px;
 }
 
-.portfolio__item {
-  margin-bottom: 15px;
-}
-
 .portfolio__item:not(:last-child) {
   margin-right: 8px;
+}
+
+.portfolio__item:nth-child(3n) {
+  margin-bottom: calc(var(--card-set-gap) / 2);
 }
 
 .portfolio__btn {
@@ -1166,14 +1159,11 @@ main {
 }
 
 @media screen and (min-width: 768px) {
-  .portfolio__btn {
+  .portfolio__item:nth-child(3n) {
     margin-bottom: 0;
   }
   .portfolio__filter {
-    display: flex;
     justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
   }
 }
 
@@ -1248,17 +1238,19 @@ main {
 }
 
 @media screen and (min-width: 768px) {
-  .portfolio__card-info {
-    height: 146px;
-  }
   .portfolio__samples-list {
     display: flex;
     flex-wrap: wrap;
     margin-left: calc(-1 * var(--card-set-gap));
+    margin-top: calc(-1 * var(--card-set-gap));
   }
   .portfolio__samples-item {
     flex-basis: calc(100% / 2 - var(--card-set-gap));
     margin-left: var(--card-set-gap);
+    margin-top: var(--card-set-gap);
+  }
+  .portfolio__samples-item:not(:last-child) {
+    margin-bottom: 0;
   }
   .overlay {
     padding-top: 50px;
@@ -1273,11 +1265,6 @@ main {
   }
   .portfolio__samples-item {
     flex-basis: calc(100% / 3 - var(--card-set-gap));
-    margin-left: var(--card-set-gap);
-    margin-bottom: var(--card-set-gap);
-  }
-  .portfolio__samples-list {
-    margin-bottom: calc(-1 * var(--card-set-gap));
   }
   .portfolio__card-info {
     height: auto;
