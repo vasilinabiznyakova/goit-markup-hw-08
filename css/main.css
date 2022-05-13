@@ -842,6 +842,9 @@ main {
 
 @media screen and (min-width: 1200px) {
   .hero {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
     padding-top: 200px;
     padding-bottom: 200px;
     background-image: linear-gradient(var(--bg-overlay-dark), var(--bg-overlay-dark)), url(../images/hero/hero-desktop.jpg);
