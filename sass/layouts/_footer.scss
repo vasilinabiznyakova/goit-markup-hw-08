@@ -1,12 +1,32 @@
 
+.footer {
+    background-color: var(--primary-background-color-theme-dark);
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+
+.footer__logo {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-family: var(--secondary-font-family);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    color: var(--logo-main-color);
+}
+
+.footer__logo-secondary {
+    color: var(--primary-text-color-theme-light);
+}
+
 .footer__address-info {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
 }
+
 .footer__social-info {
-    text-align: center;
-    margin-left: 122px;
-    margin-right: 122px;
     margin-bottom: 60px;
 }
 
@@ -24,9 +44,6 @@
 }
 
 
-footer .footer__social-item:not(:last-child) {
-    margin-right: 10px;
-}
 .footer__social-icon {
     fill: var(--primary-text-color-theme-light);
 }
@@ -38,51 +55,48 @@ footer .footer__social-item:not(:last-child) {
 
  @media screen and (min-width:768px) {
 
+
     .footer__wrapper {
         display: flex;
-        justify-content: space-between;
+        margin-bottom: 60px;
+        justify-content: space-around;
+        align-items: baseline;
         }
 
-        .footer__social-info {
-            margin-left: 0;
-            margin-right: 74px;
-            padding-top: 5px;
+    .footer__address-info,
+    .footer__social-info {
+        margin-bottom: 0;
         }
+        
+}
 
-        .footer__address-info{
-            margin-left: 60px;
-            margin-bottom: 60px;
-        }
 
-        footer .social-list__item:not(:last-child) {
-        margin-right: 10px;
-    }
 
- }
  @media screen and (min-width:1200px) {
     .footer__address-info {
-        margin-left: 0;
         margin-right: 70px;
-        margin-bottom: 0;
     }
 
-     .footer__wrapper {
-        justify-content: flex-start;
-        }
-
     .footer__social-info {
-        padding-top: 12px;
         margin-right: 92px;
     }
 
  .footer__container {
     display: flex;
-                     }
+    justify-content: space-around;
+    align-items: baseline;
+}
+
+.footer__logo {
+
+        font-size: 26px;
+        line-height: 1.19;
+    }
+
+    .footer__social-title {
+        text-align: left;
  }
-
-
-
-
+ }
 
 
 

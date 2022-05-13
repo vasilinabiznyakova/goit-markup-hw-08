@@ -18,7 +18,6 @@
 
 .mobile-menu.is-open {
     @include visible-content;
-
 }    
 
 
@@ -28,19 +27,24 @@
 
     .mobile-menu__container {
         position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-between;
+        height: 100%;
         padding-top: 48px;
         padding-left: 40px;
         padding-bottom: 48px;
         background-color: #FFFFFF;
     }
+
+
     .mobile-menu__close-btn {
         position: absolute;
         top: 10px;
         right: 15px;
     }
-    .mobile-menu__nav-list {
-        padding-bottom: 302px;
-    }
+
     .mobile-menu__nav-text {
         @include mobile-font(40px, 1.18, var(--secondary-text-color-theme-dark));
     }
@@ -96,11 +100,12 @@
     }
     
     .mobile-menu__close-btn:hover .mobile-menu_close-icon,
-    .mobile-menu__close-btn:focus .mobile-menu_close-icon,
+    .mobile-menu__close-btn:focus .mobile-menu_close-icon
      {
         fill: var(--accent-color);
         transition: fill 250ms var(--transition-timing-function);
     }
+
 }
 
 @media screen and (min-width: 768px){
