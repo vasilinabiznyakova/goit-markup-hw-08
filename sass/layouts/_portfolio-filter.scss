@@ -7,7 +7,7 @@
 .portfolio__item:not(:last-child) {
     margin-right: 8px;
 }
-.portfolio__item:nth-child(3n) {
+.portfolio__item:nth-child(-n + 3) {
     margin-bottom: calc(var(--card-set-gap) / 2);
 }
 
@@ -46,20 +46,32 @@
 
 @media screen and (min-width: 768px) {
     
-        .portfolio__item:nth-child(3n) {
-            margin-bottom: 0;
-        }
+.portfolio__item:nth-child(-n + 3) {
+        margin-bottom: 0;
+    }
     
 .portfolio__filter {
             justify-content: center;
         }
+
+.portfolio__samples-link {
+    display: flex;
+    flex-direction: column;
+    }
+    
+.portfolio__card-info {
+    flex-grow: 1;
+    }
+    
+.portfolio__samples-item {
+    display: flex;
+    }
 }
 
 @media screen and (min-width:1200px) {
     .portfolio__filter {
         margin-bottom: 50px;
-    }
-    
+    }   
 }
 
 

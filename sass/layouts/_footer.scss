@@ -4,6 +4,9 @@
     padding-top: 60px;
     padding-bottom: 60px;
 }
+.footer__wrapper {
+    margin-bottom: 60px;
+}
 
 
 .footer__logo {
@@ -26,9 +29,6 @@
     margin-bottom: 60px;
 }
 
-.footer__social-info {
-    margin-bottom: 60px;
-}
 
 
 .footer__social-title {
@@ -73,6 +73,10 @@
 
 
  @media screen and (min-width:1200px) {
+
+    .footer__wrapper {
+        margin-bottom: 0;
+    }
     .footer__address-info {
         margin-right: 70px;
     }
@@ -96,6 +100,10 @@
     .footer__social-title {
         text-align: left;
  }
+.footer__address-info {
+    text-align: left;
+}
+
  }
 
 
