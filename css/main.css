@@ -78,6 +78,8 @@ address {
 .section {
   padding-top: 60px;
   padding-bottom: 60px;
+  max-width: 1600px;
+  margin: auto;
 }
 
 @media screen and (min-width: 1200px) {
